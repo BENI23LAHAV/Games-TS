@@ -7,10 +7,13 @@ function NavBar() {
         <li>
           <Link to="/memorygame">Memory Game</Link>
         </li>
-        <li>Leaderboard</li>
+        <li>
+          <Link to="/shapes">Shapes</Link>
+        </li>
+        {/* <li>Leaderboard</li>
         <li>Settings</li>
         <li>Logout</li>
-        <li>Help</li>
+        <li>Help</li> */}
       </ul>
     </div>
   );

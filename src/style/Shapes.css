@@ -1,0 +1,44 @@
+.shape {
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+}
+
+/* עיגול */
+.circle {
+  border-radius: 50%;
+}
+
+/* ריבוע */
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+/* מלבן */
+.rectangle {
+  width: 150px;
+  height: 100px;
+}
+
+/* משולש */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  background: none;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}

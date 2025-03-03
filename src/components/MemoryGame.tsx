@@ -7,7 +7,6 @@ type MemoryGamesStates = {
   guessLeft: number;
   status: GameStatus;
 };
-
 const GameStatesVisible = {
   visible: true,
   hidden: false,
