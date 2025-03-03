@@ -4,11 +4,11 @@ import { FactoryShapes } from "../lib/FactoryShapes.ts";
 import { GeneralShape } from "../lib/classes.ts";
 import "../style/Shapes.css";
 
-export default function Shapes() {
+export default function Shapes(): React.ReactElement {
   const [shape, setShape] = useState<Shape>("square");
   const [color, setColor] = useState<Color>("red");
-  const [height, setHeight] = useState<number>(100);
-  const [width, setWidth] = useState<number>(100);
+  const [height, setHeight] = useState<number>(100); //not used for now
+  const [width, setWidth] = useState<number>(100); //not used for now
 
   const [generalShape, setGeneralShape] = useState<GeneralShape | null>(null);
 

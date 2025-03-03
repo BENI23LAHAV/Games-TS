@@ -18,7 +18,7 @@
 
 /* מלבן */
 .rectangle {
-  width: 150px;
+  width: 200px !important;
   height: 100px;
 }
 
