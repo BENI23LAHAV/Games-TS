@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import MemoryGame from "./MemoryGame";
 import Shapes from "./Shapes";
+import GussTheNumber from "./GussTheNumber";
 function Routing() {
   return (
     <div>
@@ -10,6 +11,7 @@ function Routing() {
         <Route path="/" element={<Home />} />
         <Route path="/memorygame" element={<MemoryGame />} />
         <Route path="/shapes" element={<Shapes />} />
+        <Route path="/gussthenumber" element={<GussTheNumber />} />
       </Routes>
     </div>
   );

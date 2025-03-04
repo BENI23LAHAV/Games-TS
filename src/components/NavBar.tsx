@@ -10,10 +10,9 @@ function NavBar() {
         <li>
           <Link to="/shapes">Shapes</Link>
         </li>
-        {/* <li>Leaderboard</li>
-        <li>Settings</li>
-        <li>Logout</li>
-        <li>Help</li> */}
+        <li>
+          <Link to="/gussthenumber">GussTheNumber</Link>
+        </li>
       </ul>
     </div>
   );
