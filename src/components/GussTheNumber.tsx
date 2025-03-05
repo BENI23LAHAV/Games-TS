@@ -15,7 +15,7 @@ function GussTheNumber(): React.ReactElement {
     }
     const response = gameFacade.game(Number(guess));
     setMessage(response);
-    setGuess(""); // מנקה את השדה לאחר ניחוש
+    setGuess("");
   };
 
   const handleRestart = () => {
