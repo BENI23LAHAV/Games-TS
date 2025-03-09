@@ -12,8 +12,6 @@ const ThemeComponent = () => {
   useEffect(() => {
     themeFacade.changeOnTime(baseOnTime);
     themeFacade.changeTheme(theme);
-    // עדכון הסטייל של ה-body בהתאם ל-theme הנבחר
-    document.body.setAttribute("data-theme", theme);
   }, [baseOnTime, theme]);
 
   return (

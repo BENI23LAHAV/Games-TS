@@ -10,4 +10,9 @@ interface Shapes {
   locationY?: number;
 }
 
-export { type Shapes };
+interface Command {
+  execute(): void;
+  undo(): void;
+}
+
+export { type Shapes, type Command };
