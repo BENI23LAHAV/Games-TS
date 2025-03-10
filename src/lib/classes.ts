@@ -1,6 +1,10 @@
 import { type Shapes } from "./interfaces";
 import { Color } from "./types";
-
+import {
+  greet,
+  logFuncName,
+  logAccessor,
+} from "./decorates/decoratesFunctions.ts";
 function logerClass(constructor: Function) {
   console.log(`the class ${constructor.name}`);
 }
@@ -17,7 +21,7 @@ function LogMethod(
   };
   return descriptor;
 }
-
+@greet
 abstract class GeneralShape implements Shapes {
   width: number;
   height: number;
@@ -32,43 +36,47 @@ abstract class GeneralShape implements Shapes {
   abstract getSize(): number;
 }
 
-@logerClass
+// @logerClass
+
+@greet
 class Circle extends GeneralShape {
   constructor(radius: number, color: Color) {
     super(radius, radius, color); // Circle has the same width and height
   }
-  @LogMethod
+  // @LogMethod
+  @logFuncName
+  @logAccessor
   getSize(): number {
     return Math.PI * Math.pow(this.width, 2); // πr²
   }
 }
-@logerClass
+// @logerClass
 class Square extends GeneralShape {
   constructor(width: number, height: number, color: Color) {
     super(width, height, color);
   }
-  @LogMethod
+  // @LogMethod
   getSize(): number {
     return this.width * this.height;
   }
 }
-@logerClass
+// @logerClass
 class Rectangle extends GeneralShape {
   constructor(width: number, height: number, color: Color) {
     super(width, height, color);
   }
-  @LogMethod
+  // @LogMethod
   getSize(): number {
     return this.width * this.height;
   }
 }
-@logerClass
+// @logerClass
 class Triangle extends GeneralShape {
   constructor(width: number, height: number, color: Color) {
     super(width, height, color);
   }
 
-  @LogMethod
+  // @LogMethod
   getSize(): number {
     return (this.width * this.height) / 2;
   }

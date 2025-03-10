@@ -1,5 +1,13 @@
 import { type Command } from "../interfaces";
+import {
+  logFuncName,
+  greet,
+  logParam,
+  logAccessor,
+  logProps,
+} from "../decorates/decoratesFunctions";
 
+@greet
 class Position {
   public x: number;
   public y: number;
@@ -9,7 +17,9 @@ class Position {
     this.y = y;
   }
 
-  move(x: number, y: number): void {
+  @logFuncName
+  @logAccessor
+  move(x: number, @logParam y: number): void {
     this.x += x;
     this.y += y;
   }
@@ -46,7 +56,7 @@ class GameController {
   executeCommand(command: Command): void {
     command.execute();
     this.commandHistory.push(command);
-    console.log(this.commandHistory);
+    // console.log(this.commandHistory);
 
     this.redoStack = [];
   }
@@ -78,8 +88,8 @@ class GameController {
   }
 }
 
-const moveUp = (position: Position) => new MoveCommand(position, 0, 10);
-const moveDown = (position: Position) => new MoveCommand(position, 0, -10);
+const moveUp = (position: Position) => new MoveCommand(position, 0, -10);
+const moveDown = (position: Position) => new MoveCommand(position, 0, 10);
 const moveLeft = (position: Position) => new MoveCommand(position, -10, 0);
 const moveRight = (position: Position) => new MoveCommand(position, 10, 0);
 
