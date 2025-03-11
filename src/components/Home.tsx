@@ -1,6 +1,6 @@
 import NavBar from "./NavBar";
 import ThemeComponent from "./ThemeComponent";
-import { Person, Debounce } from "../lib/decorates/decoratorsPractice";
+import { Person } from "../lib/decorates/decoratorsPractice";
 function Home() {
   const clickMe = new Person().onClick;
   return (

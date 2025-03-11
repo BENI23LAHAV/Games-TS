@@ -99,7 +99,11 @@ function Debounce(delay: number = 500) {
     return descriptor;
   };
 }
+//What happened here?
+//As you can see, We created a decorator for the method.
+//The decorator gets a number(optional) and delay the user according to the number.
 
+/**---------- Section 4 ---------- */
 const p1 = new Person();
 // console.log(p1.id);
 
