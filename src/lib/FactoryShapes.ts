@@ -1,5 +1,7 @@
 import { type Color, Shape } from "./types.ts";
-
+import { Person, Debounce } from "./decorates/decoratorsPractice.ts";
+// const p = new Person();
+// p.getFirstName();
 import {
   GeneralShape,
   Circle,
