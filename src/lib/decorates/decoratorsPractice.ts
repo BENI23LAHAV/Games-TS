@@ -6,7 +6,7 @@ function addID<T extends { new (...args: any[]): {} }>(constructor: T) {
     constructor(...args: any[]) {
       super(...args);
       this.id = Math.floor(Math.random() * 9000) + 1000;
-      console.log("New Person ", this.id);
+      // console.log("New Person ", this.id);
     }
   };
 }
@@ -16,11 +16,11 @@ function addID<T extends { new (...args: any[]): {} }>(constructor: T) {
 
 /**---------- Section 2 ---------- */
 function ClassDecorator(constructor: Function) {
-  console.log("5: Class Decorator");
+  // console.log("5: Class Decorator");
 }
 
 function PropertyDecorator(target: any, propertyKey: string) {
-  console.log("1: Property Decorator:", propertyKey);
+  // console.log("1: Property Decorator:", propertyKey);
 }
 
 function MethodDecorator(
@@ -28,7 +28,7 @@ function MethodDecorator(
   propertyKey: string,
   descriptor: PropertyDescriptor
 ) {
-  console.log("3: Method Decorator:", propertyKey);
+  // console.log("3: Method Decorator:", propertyKey);
 }
 
 function ParameterDecorator(
@@ -36,7 +36,7 @@ function ParameterDecorator(
   propertyKey: string,
   parameterIndex: number
 ) {
-  console.log("2:  Parameter Decorator:", propertyKey, parameterIndex);
+  // console.log("2:  Parameter Decorator:", propertyKey, parameterIndex);
 }
 
 function AccessDecorator(
@@ -44,7 +44,7 @@ function AccessDecorator(
   propertyKey: string,
   descriptor: PropertyDescriptor
 ) {
-  console.log("4: Access Decorator:", propertyKey);
+  // console.log("4: Access Decorator:", propertyKey);
 }
 
 @ClassDecorator
